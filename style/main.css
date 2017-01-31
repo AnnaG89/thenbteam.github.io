@@ -1,6 +1,9 @@
 div {
   width: 200px;
   z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 .hiddenheader{
   height: 40px;
@@ -8,4 +11,7 @@ div {
   border-bottom: 1px solid black;
   background-color: white;
   z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
