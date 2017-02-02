@@ -14,12 +14,12 @@
 <tr>
 <td width="78">Användarnamn</td>
 <td width="6">:</td>
-<td width="294"><input name="Fotograf" type="text" id="Fotograf"></td>
+<td width="294"><input name="username" type="text" id="username"></td>
 </tr>
 <tr>
 <td>Lösenord</td>
 <td>:</td>
-<td><input name="Lösen" type="text" id="Lösen"></td>
+<td><input name="password" type="text" id="password"></td>
 </tr>
 <tr>
 <td>&nbsp;</td>
