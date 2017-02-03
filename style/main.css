@@ -1,17 +1,15 @@
-div {
-  width: 200px;
-  z-index: -1;
-  position: absolute;
-  top: 0;
-  left: 0;
+.navbar-header{
+    background-color: white;
 }
-.hiddenheader{
-  height: 70px;
-  width: 200px;
-  border-bottom: 1px solid black;
+.icon-bar{
   background-color: white;
-  z-index: 1;
-  position: absolute;
-  top: 0;
-  left: 0;
+}
+a{
+  color: white;
+}
+body{
+  background-color: white;
+}
+header{
+  
 }
