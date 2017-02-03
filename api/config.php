@@ -1,20 +1,13 @@
 <?php
-$host="localhost"; // Host name 
-$username="root"; // Mysql username 
-$password="root"; // Mysql password 
-$db_name="thenbteam"; // Database name 
-$tbl_name="Fotografer"; // Table name 
-
-
-/* Connect to a MySQL database using driver invocation */
-$dsn = 'mysql:dbname=thenbteam;host=localhost';
+$host = 'localhost'; 
+$db = 'thenbteam';
 $user = 'root';
 $password = 'root';
+$charset = 'utf8';
+$dsn = "mysql:host=$host;dbname=$db;charset=$charset";
+$options = [ PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+			PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
+			PDO::ATTR_EMULATE_PREPARES   => false  ];
 
-try {
-    $pdo = new PDO($dsn, $user, $password);
-} catch (PDOException $e) {
-    echo 'Connection failed: ' . $e->getMessage();
-}
-
+$pdo = new PDO($dsn, $user, $password, $options);
 ?>
