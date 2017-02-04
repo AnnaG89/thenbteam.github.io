@@ -20,3 +20,6 @@ a:focus{
   background-color: #e7e7e7;
   border-radius: 3px;
 }
+.navbar {
+    background: rgba(232,231,231,0.8);
+}
