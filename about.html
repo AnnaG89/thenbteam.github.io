@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Newbie</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+
+    <link rel="stylesheet" href="style/main.css">
+</head>
+
+<body>
+
+  <!-- Header -->
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+
+      <!-- Logo -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mainNavBar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a href="index.html" class="navbar-brand">Newbie</a>
+      </div>
+
+      <!-- Menu Items -->
+      <div class="collapse navbar-collapse" id="mainNavBar">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="about.html">About</a></li>
+          <li><a href="photagraphers.html">Photagraphers</a></li>
+          <li><a href="" data-toggle="modal" data-target="#signInWindow">Sign In</a></li>
+        </ul>
+
+
+      </div>
+
+    </div>
+  </nav>
+
+
+  <!-- Log In form -->
+  <div class="modal fade" id="signInWindow">
+    <div class="modal-dialog">
+      <div class="modal-content">
+
+        <!-- Header -->
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h3 class="modal-title">Log In</h3>
+        </div>
+
+        <!-- body (form) -->
+        <div class="modal-body">
+          <form role="form">
+            <div class="form-group">
+              <input type="email" class="form-control" placeholder="Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$">
+            </div>
+            <div class="form-group">
+              <input type="password" class="form-control" placeholder="Password">
+            </div>
+          </form>
+          <div class="login-help">
+					       <a href="" data-toggle="modal" data-target="#registerWindow">Register</a> - <a href="" data-toggle="modal" data-target="#recoverPasswordWindow" align="right">Forgot Password</a>
+				  </div>
+          </div>
+
+          <!-- button -->
+          <div class="modal-footer">
+          <button class="btn btn primary btn-block" id="logInButton">Log In</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Recover password form -->
+  <div class="modal fade" id="recoverPasswordWindow">
+    <div class="modal-dialog">
+      <div class="modal-content">
+
+        <!-- Header -->
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h3 class="modal-title">Forgot Password</h3>
+        </div>
+
+        <!-- body (form) -->
+        <div class="modal-body">
+          <form role="form">
+            <div class="form-group">
+              <input type="email" class="form-control" placeholder="Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$">
+            </div>
+          </form>
+          </div>
+
+          <!-- button -->
+          <div class="modal-footer">
+          <button class="btn btn primary btn-block" id="recoverPasswordButton">Recover Password</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Register Form -->
+  <div class="modal fade" id="registerWindow">
+    <div class="modal-dialog">
+      <div class="modal-content">
+
+        <!-- Header -->
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h3 class="modal-title">Register</h3>
+        </div>
+
+        <!-- body (form) -->
+        <div class="modal-body">
+
+          <form role="form">
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="First Name">
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Last Name">
+            </div>
+            <div class="form-group">
+              <input type="email" class="form-control" placeholder="Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$">
+            </div>
+            <div class="form-group">
+              <input type="password" class="form-control" placeholder="Password">
+            </div>
+            <div class="form-group">
+              <input type="password" class="form-control" placeholder="Repeat Password">
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="City">
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Website">
+            </div>
+          </form>
+
+          </div>
+
+          <!-- button -->
+          <div class="modal-footer">
+          <button class="btn btn primary btn-block" id="registerConfirmButton">Confirm</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Main content -->
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-4 col-md-6 col-sm-12">
+        <div class="about">
+          <h1>About Newbie</h1>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="below_carousel">
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
