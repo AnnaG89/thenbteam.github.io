@@ -20,11 +20,11 @@ a:focus{
   border-radius: 3px;
 }
 .navbar {
-    background: rgba(248,248,248,0.8);
+    background: rgba(248,248,248,0.9);
 }
 .about{
   margin-top: 150px;
 }
 .photagraphers{
-  margin-top: 150px;
+  margin-top: 200px;
 }
