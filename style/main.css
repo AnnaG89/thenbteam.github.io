@@ -73,3 +73,29 @@ a:focus{
 #custom-search-input .glyphicon-search{
     font-size: 23px;
 }
+
+.one:hover ~ hr {
+  margin-left: 2%;
+  opacity: 1;
+}
+.two:hover ~ hr {
+  margin-left: 38%;
+  opacity: 1;
+}
+
+.three:hover ~ hr {
+  margin-left: 76%;
+  opacity: 1;
+}
+
+
+
+hr {
+  height: .25rem;
+  width: 20%;
+  margin: 0;
+  background: #777;
+  border: none;
+  transition: .3s ease-in-out;
+  opacity: 0;
+}
