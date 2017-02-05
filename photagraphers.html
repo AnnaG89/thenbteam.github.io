@@ -39,11 +39,6 @@
 
       <!-- Menu Items -->
       <div class="collapse navbar-collapse" id="mainNavBar">
-        <form class="navbar-form navbar-right">
-          <div class="form-group">
-            <input type="text" id="searchBar" class="form-control" placeholder="Search">
-          </div>
-        </form>
         <ul class="nav navbar-nav navbar-right">
           <li><a href="about.html">About</a></li>
           <li><a href="photagraphers.html">Photagraphers</a></li>
@@ -138,6 +133,9 @@
               <input type="text" class="form-control" placeholder="Last Name">
             </div>
             <div class="form-group">
+              <input type="text" class="form-control" placeholder="Company">
+            </div>
+            <div class="form-group">
               <input type="email" class="form-control" placeholder="Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$">
             </div>
             <div class="form-group">
@@ -164,19 +162,89 @@
     </div>
   </div>
 
+  <!-- Profile of photagrapher -->
+  <div class="modal fade" id="profileWindow">
+    <div class="modal-dialog">
+      <div class="modal-content">
+
+        <!-- Header -->
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h3 class="modal-title">Name of Photagrapher</h3>
+        </div>
+
+        <!-- body (form) -->
+        <div class="modal-body">
+          <p>Place for profilepicture</p>
+          <ul>
+            <li>Company</li>
+            <li>City</li>
+            <li>Website</li>
+          </ul>
+
+          <p>Portfolio</p>
+          <p>Contact form</p>
 
 
 
+          </div>
 
-
+          <!-- footer -->
+          <div class="modal-footer">
+          <button type="button" class="close" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- Main content -->
   <div class="container-fluid">
     <div class="row">
-      <div class="col-lg-4 col-md-6 col-sm-12">
+      <div class="col-lg-4 col-md-4 col-sm-12"></div>
+      <div class="col-lg-4 col-md-4 col-sm-12">
         <div class="photagraphers">
-          <h1>Photagraphers on this website</h1>
+          <h1>Photagraphers</h1>
         </div>
+        <div class="col-lg-4 col-md-4 col-sm-12"></div>
+      </div>
+    </div>
+
+        <!-- Search Bar -->
+        <div class="row">
+          <div class="col-lg-4 col-md-4 col-sm-12"></div>
+          <div class="col-lg-4 col-md-4 col-sm-12">
+
+            <div class="search">
+              <div id="custom-search-input">
+              <div class="input-group col-lg-12">
+                <input type="text" class="form-control input-lg" placeholder="Search" />
+                  <span class="input-group-btn">
+                    <button class="btn btn-info btn-lg" type="button">
+                      <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-4 col-sm-12"></div>
+	       </div>
+
+         <!-- Put searchresults here -->
+         <div class="row">
+           <div class="col-lg-4 col-md-4 col-sm-12"></div>
+            <div class="col-lg-4 col-md-4 col-sm-12">
+              <div class="searchResults">
+                <p>Place for search results.</p><br>
+                <a href="" data-toggle="modal" data-target="#profileWindow">Test link to photagrapher</a>
+              </div>
+            </div>
+           <div class="col-lg-4 col-md-4 col-sm-12"></div>
+         </div>
+
+
+
+
       </div>
 
       <div class="row">
@@ -189,7 +257,8 @@
     </div>
   </div>
 
-
+  <script src="script/jquery-3.1.1.min.js"></script>
+  <script src="script/main.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <!-- Latest compiled and minified JavaScript -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
