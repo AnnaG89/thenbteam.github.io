@@ -75,14 +75,14 @@ a:focus{
 }
 
 .one:hover ~ hr {
-  margin-left: 2%;
+  margin-left: 3%;
   opacity: 1;
 }
 .two:hover ~ hr {
-  margin-left: 38%;
+  margin-left: 31%;
   opacity: 1;
+  width: 36%;
 }
-
 .three:hover ~ hr {
   margin-left: 76%;
   opacity: 1;
