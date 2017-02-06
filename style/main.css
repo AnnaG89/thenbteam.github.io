@@ -87,9 +87,6 @@ a:focus{
   margin-left: 76%;
   opacity: 1;
 }
-
-
-
 hr {
   height: .25rem;
   width: 20%;
@@ -98,4 +95,65 @@ hr {
   border: none;
   transition: .3s ease-in-out;
   opacity: 0;
+}
+
+
+/*.photagrapherBody{
+  display: flex;
+  justify-content: flex-start;
+  padding: 10px;
+  background-color: yellow;
+  border: 1px solid black;
+}*/
+.photagrapherPicture{
+  margin-left: 20px;
+  width: 100%;
+}
+.photagrapherInfo{
+  width: 100%;
+  padding-top: 20px;
+}
+.portfolioPicture{
+  height: 150px;
+  width: 150px;
+  margin-top: 20px;
+  background-color: yellow;
+}
+.photagrapherDetails{
+  list-style-type: none;
+  font-weight: bold;
+  color: #777;
+}
+.photagrapherFreeText{
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.portfolioContainer {
+  margin-top: 20px;
+  padding: .5vw;
+  font-size: 0;
+  display: -ms-flexbox;
+  -ms-flex-wrap: wrap;
+  -ms-flex-direction: column;
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
+  display: -webkit-box;
+  display: flex;
+}
+.portfolioContainer div {
+  -webkit-box-flex: auto;
+  -ms-flex: auto;
+  flex: auto;
+  width: 200px;
+  margin: .5vw;
+}
+.portfolioContainer div img {
+  width: 100%;
+  height: auto;
+}
+@media screen and (max-width: 400px) {
+  .portfolioContainer div { margin: 0; }
+  .portfolioContainer { padding: 0; }
+
 }
