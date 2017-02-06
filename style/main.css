@@ -21,6 +21,7 @@ a:focus{
 }
 .navbar {
     background: rgba(248,248,248,0.9);
+    height: 60px;
 }
 .about{
   margin-top: 100px;
@@ -73,7 +74,15 @@ a:focus{
 #custom-search-input .glyphicon-search{
     font-size: 23px;
 }
-
+.one{
+  margin-top: 5px;
+}
+.two{
+  margin-top: 5px;
+}
+.three{
+  margin-top: 5px;
+}
 .one:hover ~ hr {
   margin-left: 3%;
   opacity: 1;
@@ -98,13 +107,6 @@ hr {
 }
 
 
-/*.photagrapherBody{
-  display: flex;
-  justify-content: flex-start;
-  padding: 10px;
-  background-color: yellow;
-  border: 1px solid black;
-}*/
 .photographerPicture{
   margin-left: 20px;
   width: 100%;
