@@ -1,23 +1,50 @@
-$(document).on('click', '#logInButton', function () {
+/*$(document).on('click', '#logInButton', function () {
     var email;
     var password;
     alert("Clicked the log in button");
-});
+});*/
+$(document).ready(function(){
+  /*function test(btn) {
+    var val = btn.form.querySelector('input[name="Montant"]').value;
+    alert(val);
+  }*/
 
-$(document).on('click', '#registerConfirmButton', function () {
-  var firstName;
-  var lastName;
-  var email;
-  var password1;
-  var password2;
-  var city;
-  var website;
+  $("#registerWindow").on('click', '#registerConfirmButton', function (e) {
+        e.preventDefault();
+        var firstName = $('.first_name').val();
+        /*var lastName = $('.last_name').val();
+        var email = $('.company').val();
+        var password1 = $('.password1').val();
+        var password2 = $('.password2').val();
+        var city = $('.city').val();
+        var website = $('.website').val();*/
 
-    alert("Clicked confirm registration");
-});
+        console.log(firstName);
+        alert("Clicked confirm registration " + firstName);
 
+        //var url = "../api/register.php?";
+
+        $.post( "api/register.php?", { firstname: firstName} );
+
+
+    });
+
+
+    /*var firstName = $("#first_name").val();
+    var lastName;
+    var email;
+    var password1;
+    var password2;
+    var city;
+    var website;
+
+      console.log(firstName);
+  */
+
+
+/*
 $(document).on('click', '#recoverPasswordButton', function () {
   var email;
 
-    alert("Clicked the recover password button");
+    alert("Clicked the recover password button");*/
 });
