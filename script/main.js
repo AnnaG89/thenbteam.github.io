@@ -25,8 +25,8 @@ $(document).ready(function(){
 
         //var url = "../api/register.php?";
 
-        $.post( "api/register.php?", { firstname: firstName, email: email} );
-
+        //$.post( "../api/register.php?", { ffirstname: firstName, femail: email} );
+        $.post( "../api/register.php", $( ".registrationForm" ).serialize() );   
 
     });
 
