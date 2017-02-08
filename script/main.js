@@ -23,10 +23,17 @@ $(document).ready(function(){
         "\nCity: " + city +
         "\nWebsite: " + website);
 
-        $.post( "../api/register.php?", { ffirstname: firstName, femail: email} ) //Todo: Ersätt med riktig url
+        $.post( "../api/register.php?",
+        { ffirstname: firstName,
+          flastname: lastName,
+          fcompany: company,
+          femail: email,
+          fpassword: password2,
+          fcity: city,
+          fwebsite: website} ) //Todo: Ersätt med riktig url
         .done(function(data){
           console.log("success");
-        }
+        })
         .fail(function(error){
           console.log("Failed register");
         });
