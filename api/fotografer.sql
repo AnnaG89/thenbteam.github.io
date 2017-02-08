@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:8889
--- Generation Time: Feb 07, 2017 at 09:24 AM
+-- Generation Time: Feb 08, 2017 at 02:04 PM
 -- Server version: 5.6.33
 -- PHP Version: 7.0.12
 
@@ -30,6 +30,7 @@ CREATE TABLE `Fotografer` (
   `website` varchar(256) COLLATE utf8_swedish_ci NOT NULL,
   `city` varchar(256) COLLATE utf8_swedish_ci NOT NULL,
   `bio` text COLLATE utf8_swedish_ci,
+  `pic` blob NOT NULL,
   `password` varchar(256) COLLATE utf8_swedish_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_swedish_ci;
 
@@ -37,15 +38,10 @@ CREATE TABLE `Fotografer` (
 -- Dumping data for table `Fotografer`
 --
 
-INSERT INTO `Fotografer` (`id`, `firstname`, `lastname`, `company`, `email`, `insta`, `website`, `city`, `bio`, `password`) VALUES
-(1, '', '', 'Suzanna K', '', '', '', 'Staffanstorp', NULL, ''),
-(2, '', '', 'Maria Westerlind', '', '', '', 'Sigtuna', NULL, ''),
-(3, '', '', '', 'myemail@domain.com', '', '', '', NULL, 'mypassword'),
-(26, 'Anna', 'Gustafsson', 'AnnasFoto', 'annagustafsson@hotmail.com', 'Anna', 'anna.se', 'Trollhättan', NULL, 'saBTEwdxLdRJ2'),
-(27, 'Josefine', 'Maad', 'Josefines foto', 'maad@gmail.com', NULL, '', '', NULL, 'saBTEwdxLdRJ2'),
-(28, 'Josefine', 'Maad', 'Josefines foto', 'maad@gmail.se', NULL, '', '', NULL, 'saBTEwdxLdRJ2'),
-(29, 'Josefine', 'Maad', 'Josefines foto', 'jmaad@gmail.se', NULL, '', '', NULL, 'saBTEwdxLdRJ2'),
-(30, 'dd', 'dd', 'dd', 'aa', 'dd', 'dd', 'dd', 'dd', 'saBHCM8SDXges');
+INSERT INTO `Fotografer` (`id`, `firstname`, `lastname`, `company`, `email`, `insta`, `website`, `city`, `bio`, `pic`, `password`) VALUES
+(1, '', '', 'Suzanna K', '', '', '', 'Staffanstorp', NULL, '', ''),
+(2, '', '', 'Maria Westerlind', '', '', '', 'Sigtuna', NULL, '', ''),
+(37, 'Ida', 'Hultberg', 'FotografIdaHultberg', 'idahultberg@gmail.com', NULL, 'www.fotografidahultberg.se', 'Trelleborg', NULL, '', 'saBTEwdxLdRJ2');
 
 --
 -- Indexes for dumped tables
@@ -65,4 +61,4 @@ ALTER TABLE `Fotografer`
 -- AUTO_INCREMENT for table `Fotografer`
 --
 ALTER TABLE `Fotografer`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
