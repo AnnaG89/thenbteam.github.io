@@ -94,11 +94,11 @@ var searchResult = function() {
   console.log("Funkar");
   var listStart = "<ol>";
   for(var i = 0; i < 20; i++) {  // (var i in data)
-    listStart += "<table class='table'>" +
+    listStart += "<table class='table table-hover table-condensed'>" +
       "<tr>" +
         "<th>Awesome Name</th>" +
-        "<th>The awesome company</th>" +
-        "<td>Not that awesome city</td>" +
+        "<td class='textAlignCenter'>The awesome company</td>" +
+        "<td class='textAlignRight'>Not that awesome city</td>" +
       "</tr>" +
     "</table>";
 
