@@ -2,7 +2,7 @@
 session_start();
 ?>
 <?php
-require "config.php";
+require "newbieConfig.php";
 
 $passwd='fpassword2';
 $hash = crypt($passwd, "salt");
