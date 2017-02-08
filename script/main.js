@@ -32,10 +32,10 @@ $(document).ready(function(){
           fcity: city,
           fwebsite: website} ) //Todo: Ersätt med riktig url
         .done(function(data){
-          console.log("success");
+          console.log("Success" + data);
         })
         .fail(function(error){
-          console.log("Failed register");
+          console.log("Failed register" + error);
         });
     });
 
