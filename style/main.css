@@ -7,7 +7,7 @@ a:focus{
 .carouselholder{
   width:100%;
   padding: 30px;
-  margin-top: 150px;
+  margin-top: 30px;
 }
 .right.carousel-control, .left.carousel-control {
     display: none;
@@ -24,12 +24,12 @@ a:focus{
     height: 60px;
 }
 .about{
-  margin-top: 100px;
-  margin-bottom: 50px;
+  margin-top: 30px;
+  margin-bottom: 20px;
 }
 .photagraphers{
-  margin-top: 100px;
-  margin-bottom: 50px;
+  margin-top: 30px;
+  margin-bottom: 20px;
 }
 /*.row{
   border: 2px solid black;
@@ -40,6 +40,7 @@ a:focus{
   justify-content: space-around;
 }
 .searchResults{
+  margin-top: 20px;
   padding: 10px;
 }
 
@@ -158,4 +159,9 @@ hr {
   .portfolioContainer div { margin: 0; }
   .portfolioContainer { padding: 0; }
 
+}
+.searchResults ol{
+  margin-left: 0px !important;
+  padding-left: 0px !important;
+  padding-top: 10px;
 }

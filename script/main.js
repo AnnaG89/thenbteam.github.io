@@ -72,7 +72,7 @@ $(document).ready(function(){
           alert("Clicked recover button \n" +
           "\nEmail: " + email);
 
-          /*$.post( "api/register.php?", //Todo: Ersätt med riktig url byt till rätt variabel   
+          /*$.post( "api/register.php?", //Todo: Ersätt med riktig url byt till rätt variabel
             {
               femail: email,
             .done(function(data){
@@ -87,4 +87,23 @@ $(document).ready(function(){
 
 
 
+    searchResult();
 });
+// vid klick skicka get request
+var searchResult = function() {
+  console.log("Funkar");
+  var listStart = "<ol>";
+  for(var i = 0; i < 20; i++) {  // (var i in data)
+    listStart += "<table class='table'>" +
+      "<tr>" +
+        "<th>Awesome Name</th>" +
+        "<th>The awesome company</th>" +
+        "<td>Not that awesome city</td>" +
+      "</tr>" +
+    "</table>";
+
+  }
+  listStart += "</ol>";
+  console.log(listStart);
+  $(".searchResults").html(listStart);
+};
