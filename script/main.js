@@ -50,6 +50,18 @@ $(document).ready(function(){
           "\nEmail: " + email +
           "\nPassword: " + password);
 
+
+        /*  $.post( "api/register.php?", //Todo: Ersätt med riktig url  byt till rätt variabel
+          {
+            femail: email,
+            fpassword: password2,
+          .done(function(data){
+            console.log("Success" + data);
+          })
+          .fail(function(error){
+            console.log("Failed login" + error);
+          });*/
+
     });
 
     // Recover Password
@@ -57,9 +69,18 @@ $(document).ready(function(){
           e.preventDefault();
           var email = $('.emailRecover').val();
 
-
           alert("Clicked recover button \n" +
           "\nEmail: " + email);
+
+          /*$.post( "api/register.php?", //Todo: Ersätt med riktig url byt till rätt variabel   
+            {
+              femail: email,
+            .done(function(data){
+              console.log("Success" + data);
+            })
+            .fail(function(error){
+              console.log("Failed recover" + error);
+            });*/
     });
 
 
