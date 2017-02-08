@@ -23,7 +23,7 @@ $(document).ready(function(){
         "\nCity: " + city +
         "\nWebsite: " + website);
 
-        $.post( "../api/register.php?",
+        $.post( "api/register.php?",
         { ffirstname: firstName,
           flastname: lastName,
           fcompany: company,

@@ -17,11 +17,9 @@ if(isset($_POST['femail']) ){
         $sql = "INSERT INTO `Fotografer`(`firstname`, `lastname`, `company`, `email`, `website`, `city`, `password`)VALUES(:firstname, :lastname, :company, :email, :website, :city, :password)";
         $stm_insert = $pdo->prepare($sql);
         $stm_insert->execute(['firstname' => $_POST['ffirstname'], 'lastname' => $_POST['flastname'], 'company' => $_POST['fcompany'], 'email' => $_POST['femail'], 'website' => $_POST['fwebsite'], 'city' => $_POST['fcity'], 'password' => $hash]);
-        echo "<h1>OK</h1>";
+        echo json_encode(TRUE);
     }else{
-       echo "<h1>Denna emailadress är redan registrerad, logga in.</h1>"; 
+       echo json_encode(FALSE); 
     }
 }
 ?>
-</body>
-</html>
