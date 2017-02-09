@@ -1,6 +1,6 @@
 $(document).ready(function(){
 
-  $.getJSON(newbie.zocomutbildning.se/api/loginstatus.php)
+  /*$.getJSON(newbie.zocomutbildning.se/api/loginstatus.php)
 
     .done(function(data){
       if(data.status){
@@ -13,7 +13,7 @@ $(document).ready(function(){
         $(".SignOutMenu").hide();
         $(".signedInAs").hide();
       }
-    }
+    }*/
 
   // Registration form
   $("#registerWindow").on('click', '#registerConfirmButton', function (e) {
@@ -36,7 +36,7 @@ $(document).ready(function(){
         "\nCity: " + city +
         "\nWebsite: " + website);
 
-        $.post( "newbie.zocomutbildning.se/api/register.php?",
+        $.post( "/api/register.php?",
         { ffirstname: firstName,
           flastname: lastName,
           fcompany: company,
@@ -162,11 +162,10 @@ $(document).ready(function(){
 
 
 // vid klick skicka get request
-var searchResult = function() {
-  $.getJSON(read.php)
+var searchResult = function(){
+  $.getJSON("/api/read.php")
   .done(function(data){
     for(var i = 0; i < data.length; i++){
-      data[i]
 
       console.log("Hämtar info");
       var listStart = "<ol>";
@@ -182,4 +181,5 @@ var searchResult = function() {
   listStart += "</ol>";
   console.log(listStart);
   $(".searchResults").html(listStart);
-};
+});
+}
