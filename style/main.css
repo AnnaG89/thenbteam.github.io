@@ -20,16 +20,16 @@ a:focus{
   margin-top: 50px;
 }
 .navbar {
-
+    margin-bottom: 0px;
     background: rgba(248,248,248,0.9);
     min-height: 60px;
 }
 .about{
-  margin-top: 30px;
+  margin-top: 50px;
   margin-bottom: 20px;
 }
 .photagraphers{
-  margin-top: 30px;
+  margin-top: 50px;
   margin-bottom: 20px;
 }
 /*.row{
@@ -182,5 +182,12 @@ tbody{
   text-align: center;
 }
 .textAlignRight{
+  text-align: right;
+}
+.signedInAs{
+  width: 100%;
+  display: block; // Ändra till none och använd toggle
+  margin-right: 15px;
+  padding: 15px;
   text-align: right;
 }
