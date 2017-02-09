@@ -103,11 +103,11 @@ $(document).ready(function(){
                                     "A lot of free text from this photagrapher. A lot of free text from this photagrapher." +
                                     "A lot of free text from this photagrapher. A lot of free text from this photagrapher.</p>";
 
-      var img1 = "<img src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/jeremiah-wilson-1.jpg'>";
-      var img2 = "<img src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/jeremiah-wilson-2.jpg'>";
-      var img3 = "<img src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/jeremiah-wilson-3.jpg'>";
-      var img4 = "<img src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/jeremiah-wilson-4.jpg'>";
-      var img5 = "<img src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/jeremiah-wilson-5.jpg'>";
+      var img1 = '<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/jeremiah-wilson-1.jpg">';
+      var img2 = '<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/jeremiah-wilson-2.jpg">';
+      var img3 = '<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/jeremiah-wilson-3.jpg">';
+      var img4 = '<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/jeremiah-wilson-4.jpg">';
+      var img5 = '<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/jeremiah-wilson-5.jpg">';
 
       alert("" +
       photographerName + "\n" +
