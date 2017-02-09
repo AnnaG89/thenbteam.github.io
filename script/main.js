@@ -129,7 +129,7 @@ $(document).ready(function(){
       $(".photographerCompany").html(photographerCompany);
       $(".photographerCity").html(photographerCity);
       $(".photographerWebsite").html(photographerWebsite);
-      $(".photographerContact").html(hotographerContact);
+      $(".photographerContact").html(photographerContact);
       $(".photographerFreeText").html(photographerFreeText);
       $(".img1").html(img1);
       $(".img2").html(img2);
