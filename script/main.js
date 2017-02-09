@@ -169,7 +169,7 @@ var searchResult = function(){
     for(var i = 0; i < data.length; i++){
 
       console.log("Hämtar info");
-        tableStart += "<tr>" +
+        tableStart += "<tr id=" + data[i].id + ">" +
             "<th>" + data[i].firstname + " " + data[i].lastname + "</th>" +
             "<td class='textAlignCenter'>" + data[i].company + "</td>" +
             "<td class='textAlignRight'>" + data[i].city +"</td>" +
