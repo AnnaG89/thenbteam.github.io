@@ -1,6 +1,19 @@
 $(document).ready(function(){
 
+  $.getJSON(newbie.zocomutbildning.se/api/loginstatus.php)
 
+    .done(function(data){
+      if(data.status){
+        $(".SignOutMenu").show();
+        $(".SignInMenu").hide();
+        $(".signedInAs").show();
+      }
+      else{
+        $(".SignInMenu").show();
+        $(".SignOutMenu").hide();
+        $(".signedInAs").hide();
+      }
+    }
 
   // Registration form
   $("#registerWindow").on('click', '#registerConfirmButton', function (e) {
@@ -40,8 +53,7 @@ $(document).ready(function(){
     });
 
     // Sign In form
-    $("#signInWindow").on('click', '#logInButton', function (e) {
-          e.preventDefault();
+    $("#signInWindow").on('click', '#logInButton', function () {
           var email = $('.emailSignIn').val();
           var password = $('.passwordSignIn').val();
 
@@ -49,6 +61,7 @@ $(document).ready(function(){
           alert("Clicked sign in \n" +
           "\nEmail: " + email +
           "\nPassword: " + password);
+
 
 
         /*  $.post( "api/register.php?", //Todo: Ersätt med riktig url  byt till rätt variabel
@@ -86,6 +99,7 @@ $(document).ready(function(){
     // View profile
     $(".testLink").click(function(e){
       e.preventDefault();
+
       var photographerName = "Fotografnamn";
       var photographerPicture = "<img src='img/profilePictureTest.jpg'  alt='profilePicture' />";
       var photographerCompany = "Företagsnamn";
@@ -149,16 +163,20 @@ $(document).ready(function(){
 
 // vid klick skicka get request
 var searchResult = function() {
-  console.log("Funkar");
-  var listStart = "<ol>";
-  for(var i = 0; i < 20; i++) {  // (var i in data)
-    listStart += "<table class='table table-hover table-condensed'>" +
-      "<tr>" +
-        "<th>Awesome Name</th>" +
-        "<td class='textAlignCenter'>The awesome company</td>" +
-        "<td class='textAlignRight'>Not that awesome city</td>" +
-      "</tr>" +
-    "</table>";
+  $.getJSON(read.php)
+  .done(function(data){
+    for(var i = 0; i < data.length; i++){
+      data[i]
+
+      console.log("Hämtar info");
+      var listStart = "<ol>";
+        listStart += "<table class='table table-hover table-condensed'>" +
+          "<tr>" +
+            "<th>" + data[i].firstname + " " + data[i].lastname + "</th>" +
+            "<td class='textAlignCenter'>" + data[i].company + "</td>" +
+            "<td class='textAlignRight'>" + data[i].city +"</td>" +
+          "</tr>" +
+        "</table>";
 
   }
   listStart += "</ol>";

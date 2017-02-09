@@ -186,8 +186,14 @@ tbody{
 }
 .signedInAs{
   width: 100%;
-  display: block; // Ändra till none och använd toggle
+  display: block; /* Ändra till none och använd toggle*/
   margin-right: 15px;
   padding: 15px;
   text-align: right;
+}
+#SignInMenu{
+  display: block;
+}
+#SignOutMenu{
+  display: none;
 }
