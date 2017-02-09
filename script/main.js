@@ -165,21 +165,18 @@ $(document).ready(function(){
 var searchResult = function(){
   $.getJSON("/api/read.php")
   .done(function(data){
+    tableStart = "<table class='table table-hover table-condensed'>" ;
     for(var i = 0; i < data.length; i++){
 
       console.log("Hämtar info");
-      var listStart = "<ol>";
-        listStart += "<table class='table table-hover table-condensed'>" +
-          "<tr>" +
+        tableStart += "<tr>" +
             "<th>" + data[i].firstname + " " + data[i].lastname + "</th>" +
             "<td class='textAlignCenter'>" + data[i].company + "</td>" +
             "<td class='textAlignRight'>" + data[i].city +"</td>" +
-          "</tr>" +
-        "</table>";
-
-  }
-  listStart += "</ol>";
-  console.log(listStart);
-  $(".searchResults").html(listStart);
+          "</tr>";
+        }
+  tableStart += "</table>";
+  console.log(tableStart);
+  $(".searchResults").html(tableStart);
 });
 }
