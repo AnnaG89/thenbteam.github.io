@@ -25,9 +25,9 @@ $hash = crypt($passwd, "salt");
         $sql = "UPDATE `Fotografer` SET `firstname`= :firstname,`lastname`= :lastname,`company`= :company, `email`= :email, `insta`= :insta, `website`= :website, `city`=:city, `bio`= :bio, `password`= :password WHERE `id` LIKE 30";
         $stm_update = $pdo->prepare($sql);
         $stm_update->execute(['firstname' => $_POST['ufirstname'], 'lastname' => $_POST['ulastname'], 'company' => $_POST['ucompany'], 'email' => $_POST['uemail'], 'insta' => $_POST['uinsta'], 'website' => $_POST['uwebsite'], 'city' => $_POST['ucity'], 'bio' => $_POST['ubio'], 'password' => $hash]);
-        echo json_encode(Profile Updated);
+        echo json_encode(1);
     }else{
-       echo json_encode(Something went wrong); 
+       echo json_encode(2); 
     }
 }
 ?>
