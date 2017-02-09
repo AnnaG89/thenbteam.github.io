@@ -112,6 +112,9 @@ hr {
   margin-left: 20px;
   width: 100%;
 }
+.photographerPicture img{
+  border-radius: 50%;
+}
 .photographerInfo{
   width: 100%;
   padding-top: 20px;
