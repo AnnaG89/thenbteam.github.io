@@ -12,7 +12,7 @@ include_once('config.php');
 $username=$_POST['email'];
 $password=$_POST['password'];
 // To protect MySQL injection (more detail about MySQL injection)
-$STH = $pdo->prepare("SELECT * FROM $tbl_name WHERE email='$username' and password='$password'");
+$STH = $pdo->prepare("SELECT * FROM Fotografer WHERE email='$username' and password='$password'");
     try {
         $STH->execute();
     }
