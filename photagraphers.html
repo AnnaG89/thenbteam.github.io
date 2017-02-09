@@ -176,7 +176,7 @@
         <!-- Header -->
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h3 class="modal-title">Name of Photographer</h3>
+          <h3 class="modal-title photographerName">Name of Photographer</h3>
         </div>
 
          <!-- body (form) -->
@@ -184,16 +184,15 @@
           <div class="row">
             <div class="col-lg-4 col-md-8 col-sm-12">
               <div class="photographerPicture">
-                <img src="img/profilePictureTest.jpg" class="img-circle" alt="profilePicture" />
               </div>
             </div>
             <div class="col-lg-4 col-md-8 col-sm-12">
               <div class="photographerInfo">
                 <ul class="photographerDetails">
-                  <li>Company:</li>
-                  <li>City:</li>
-                  <li>Website:</li>
-                  <li>Contact:</li>
+                  <li class="photographerCompany">Company:</li>
+                  <li class="photographerCity">City:</li>
+                  <li class="photographerWebsite">Website:</li>
+                  <li class="photographerContact">Contact:</li>
                 </ul>
               </div>
             </div>
@@ -203,7 +202,7 @@
         <div class="row">
           <div class="col-lg-12 col-md-12 col-sm-12">
             <div class="photographerFreeText">
-            <h4>Free text</h4>
+            <!--<h4>Free text</h4>
               <p>A lot of free text from this photagrapher. A lot of free text from this photagrapher.
               A lot of free text from this photagrapher. A lot of free text from this photagrapher.
               A lot of free text from this photagrapher. A lot of free text from this photagrapher.
@@ -213,7 +212,7 @@
               A lot of free text from this photagrapher. A lot of free text from this photagrapher.
               A lot of free text from this photagrapher. A lot of free text from this photagrapher.
               A lot of free text from this photagrapher. A lot of free text from this photagrapher.
-              A lot of free text from this photagrapher. A lot of free text from this photagrapher.</p>
+              A lot of free text from this photagrapher. A lot of free text from this photagrapher.</p>-->
             </div>
           </div>
         </div>
@@ -221,11 +220,17 @@
         <!-- Portfolio -->
         <div class="container-fluid">
           <div class="portfolioContainer">
-            <div><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/jeremiah-wilson-1.jpg" alt></div>
-            <div><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/jeremiah-wilson-2.jpg" alt></div>
-            <div><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/jeremiah-wilson-3.jpg" alt></div>
-            <div><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/jeremiah-wilson-4.jpg" alt></div>
-            <div><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/jeremiah-wilson-5.jpg" alt></div>
+            <div class="img1" ></div>
+            <div class="img2" ></div>
+            <div class="img3" ></div>
+            <div class="img4" ></div>
+            <div class="img5" ></div>
+
+            <!-- <div class="img1" ><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/jeremiah-wilson-1.jpg" alt></div>
+            <div class="img2" ><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/jeremiah-wilson-2.jpg" alt></div>
+            <div class="img3" ><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/jeremiah-wilson-3.jpg" alt></div>
+            <div class="img4" ><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/jeremiah-wilson-4.jpg" alt></div>
+            <div class="img5" ><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/jeremiah-wilson-5.jpg" alt></div> -->
   <!-- images placed inside block elements to deal with a Firefox rendering bug affecting  scaled flexbox images -->
           </div>
         </div> <!-- Portfolio end -->
@@ -289,10 +294,9 @@
            <div class="col-lg-2 col-md-2 col-sm-12"></div>
             <div class="col-lg-8 col-md-8 col-sm-12">
               <div class="searchResults">
-                <p>Place for search results.</p><br>
-                <a href="" data-toggle="modal" data-target="#profileWindow">Test link to photagrapher</a>
+
               </div>
-              <a href="" data-toggle="modal" data-target="#profileWindow">Test link to photagrapher</a>
+              <a href="" class="testLink" data-toggle="modal" data-target="#profileWindow">Test link to photagrapher</a>
             </div>
            <div class="col-lg-2 col-md-2 col-sm-12"></div>
          </div>
