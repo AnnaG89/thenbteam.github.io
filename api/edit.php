@@ -2,7 +2,7 @@
 session_start();
 ?>
 <?php
-require "newbieConfig.php";
+require "config.php";
 ?>
 <?php
 
