@@ -24,9 +24,9 @@ $row=$pdo->prepare($sql);
 $row->execute();
 $result=$row->fetchAll(PDO::FETCH_ASSOC);
 
-$main = array('data'=>$result);
+$personal = array('data'=>$result);
 
-echo json_encode($main); 
+echo json_encode($personal); 
 
 
 ?>
