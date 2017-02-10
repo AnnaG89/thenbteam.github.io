@@ -69,7 +69,8 @@ $(document).ready(function(){
             password: password} )
           .done(function(data){
             console.log("Success" + data);
-            $('#signInWindow').hide();
+            $("#signInWindow").modal('hide');
+            //$('#signInWindow').hide();
           })
           .fail(function(error){
             console.log("Failed login" + error);
