@@ -32,9 +32,9 @@ a:focus{
   margin-top: 50px;
   margin-bottom: 20px;
 }
-/*.row{
-  border: 2px solid black;
-}*/
+ul {
+  list-style-type: none;
+}
 .search{
   width: 100%;
   display: flex;
@@ -184,7 +184,7 @@ tbody{
 .textAlignRight{
   text-align: right;
 }
-.signedInAs{
+.signedInAsWrapper{
   width: 100%;
   display: block; /* Ändra till none och använd toggle*/
   margin-right: 15px;

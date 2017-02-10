@@ -1,19 +1,23 @@
 $(document).ready(function(){
 
-  /*$.getJSON(newbie.zocomutbildning.se/api/loginstatus.php)
+
+  // Login status
+  /*$.getJSON("newbie.zocomutbildning.se/api/loginstatus.php")
 
     .done(function(data){
       if(data.status){
         $(".SignOutMenu").show();
         $(".SignInMenu").hide();
-        $(".signedInAs").show();
+        $(".signedInAsWrapper").show();
+        var signedInAs = "Your signed in as " + data.firstname + " " + data.lastname ;
+        $(".signedInAs").html(signedInAs);
       }
       else{
         $(".SignInMenu").show();
         $(".SignOutMenu").hide();
-        $(".signedInAs").hide();
+        $(".signedInAsWrapper").hide();
       }
-    }*/
+    });*/
 
   // Registration form
   $("#registerWindow").on('click', '#registerConfirmButton', function (e) {
