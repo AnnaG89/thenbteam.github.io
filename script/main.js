@@ -2,7 +2,7 @@ $(document).ready(function(){
 
 
   // Login status
-  /*$.getJSON("newbie.zocomutbildning.se/api/loginstatus.php")
+  /*$.getJSON("/api/loginstatus.php")
 
     .done(function(data){
       if(data.status){
@@ -47,7 +47,7 @@ $(document).ready(function(){
           femail: email,
           fpassword: password2,
           fcity: city,
-          fwebsite: website} ) //Todo: Ersätt med riktig url
+          fwebsite: website} )
         .done(function(data){
           console.log("Success" + data);
         })
@@ -61,23 +61,19 @@ $(document).ready(function(){
           var email = $('.emailSignIn').val();
           var password = $('.passwordSignIn').val();
 
+        console.log( "\nEmail: " + email + "\nPassword: " + password);
 
-          alert("Clicked sign in \n" +
-          "\nEmail: " + email +
-          "\nPassword: " + password);
-
-
-
-        /*  $.post( "api/register.php?", //Todo: Ersätt med riktig url  byt till rätt variabel
+        $.post( "api/checklogin.php?",
+          .done(function(data){
           {
-            femail: email,
-            fpassword: password2,
+            email: email,
+            password: password} )
           .done(function(data){
             console.log("Success" + data);
           })
           .fail(function(error){
             console.log("Failed login" + error);
-          });*/
+          });
 
     });
 
