@@ -70,7 +70,6 @@ $(document).ready(function(){
           .done(function(data){
             console.log("Success" + data);
             $("#signInWindow").modal('hide');
-            //$('#signInWindow').hide();
           })
           .fail(function(error){
             console.log("Failed login" + error);
