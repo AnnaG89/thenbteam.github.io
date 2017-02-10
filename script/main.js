@@ -2,7 +2,7 @@ $(document).ready(function(){
 
 
   // Login status
-  /*$.getJSON("/api/loginstatus.php")
+  $.getJSON("/api/loginstatus.php")
 
     .done(function(data){
       if(data.status){
@@ -17,7 +17,7 @@ $(document).ready(function(){
         $(".SignOutMenu").hide();
         $(".signedInAsWrapper").hide();
       }
-    });*/
+    });
 
   // Registration form
   $("#registerWindow").on('click', '#registerConfirmButton', function (e) {
@@ -64,17 +64,16 @@ $(document).ready(function(){
         console.log( "\nEmail: " + email + "\nPassword: " + password);
 
         $.post( "api/checklogin.php?",
-          .done(function(data){
           {
             email: email,
             password: password} )
           .done(function(data){
             console.log("Success" + data);
+            $('#signInWindow').hide();
           })
           .fail(function(error){
             console.log("Failed login" + error);
           });
-
     });
 
     // Recover Password
