@@ -20,6 +20,7 @@ Jensen Education System Development
 
 Responsibility in the project:
   - Front end
+  
 Technologies I used in the project: 
   - html5 
   - css3 
