@@ -14,9 +14,9 @@ kortfattat din arbetsprocess (mobile first eller ngt annat) och som resonerar
 Contributors
 ------------
 Tobias Pettersson 
-https://se.linkedin.com/in/tobias-pettersson
-Web development
-Jensen Education System Development
+  - https://se.linkedin.com/in/tobias-pettersson
+  - Web development
+  - Jensen Education System Development
 
 Responsibility in the project:
   - Front end
