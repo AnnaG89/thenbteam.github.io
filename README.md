@@ -11,6 +11,10 @@ punktlista med vilka teknologier du använt
 kortfattat din arbetsprocess (mobile first eller ngt annat) och som resonerar 
 ---------
 
+The Project
+-----------
+http://newbie.zocomutbildning.se/index.html
+
 Contributors
 ------------
 Tobias Pettersson 
@@ -52,8 +56,6 @@ Toni
 Josephine
 
 
-The Project
------------
-http://newbie.zocomutbildning.se/index.html
+
 
   
