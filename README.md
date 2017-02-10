@@ -32,7 +32,18 @@ Technologies I used in the project:
 
 
 
-Anna 
+Anna Gustafsson
+  - https://www.linkedin.com/in/anna-gustafsson-087567b3
+  - Back End-utveckling i PHP & Databasteknik
+  - Webbutveckling inom e-handel, Medieinstitutet
+
+Responsibilities in the project:
+  - Back end
+
+Technologies I used in the project
+  - PHP
+  - MySQL
+  - JSON
 
 
 Toni
