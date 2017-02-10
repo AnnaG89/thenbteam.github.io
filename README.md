@@ -1,5 +1,5 @@
-# thenbteam.github.io
-A website for photagraphers 
+# Newbie A website for photagraphers 
+thenbteam.github.io
 
 --------
 Radera detta stycke när readme är klar
@@ -18,8 +18,16 @@ https://se.linkedin.com/in/tobias-pettersson
 Web development
 Jensen Education System Development
 
-- Responsibility in the project: Front end
-- Technologies I used in the project: html5, css3, js, jQuery, Bootstrap, Ajax, 
+Responsibility in the project:
+  - Front end
+Technologies I used in the project: 
+  - html5 
+  - css3 
+  - js
+  - jQuery
+  - Bootstrap
+  - Ajax
+  - JSON
 
 
 
