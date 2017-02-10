@@ -61,13 +61,9 @@ $(document).ready(function(){
           var email = $('.emailSignIn').val();
           var password = $('.passwordSignIn').val();
 
-
-          alert("Clicked sign in \n" +
-          "\nEmail: " + email +
-          "\nPassword: " + password);
+        console.log( "\nEmail: " + email + "\nPassword: " + password);
 
         $.post( "api/checklogin.php?",
-
           .done(function(data){
           {
             email: email,
