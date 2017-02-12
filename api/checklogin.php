@@ -1,18 +1,14 @@
 <?php
 session_start();
 ?>
-<!DOCTYPE HTML>
-<html>
-<head>
-</head>
-<body>
 <?php
-include_once('config.php');
+require('newbieConfig.php');
+echo "begin";
 // username and password sent from form
 $username=$_POST['email'];
 $password=$_POST['password'];
 // To protect MySQL injection (more detail about MySQL injection)
-$STH = $pdo->prepare("SELECT * FROM Fotografer WHERE email='$username' and password='$password'");
+$STH = $pdo->prepare("SELECT * FROM `Fotografer` WHERE `email`='$username' AND `password`='$password'");
     try {
         $STH->execute();
     }
@@ -21,13 +17,9 @@ $STH = $pdo->prepare("SELECT * FROM Fotografer WHERE email='$username' and passw
     }
 if ($STH->rowCount() == 1){
         $_SESSION['userid'] = 1;
-echo "<script type='text/javascript'>
-        document.location.href = 'login_success.php';
-        </script>";
+echo json_encode(TRUE);
         exit;
 }else {
-echo "Felaktig epost eller lösenord";
+echo json_encode(FALSE);
 }
 ?>
-</body>
-</html>
