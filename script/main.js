@@ -1,20 +1,28 @@
 $(document).ready(function(){
-
+ var signedInAs;
 
   // Login status
   $.getJSON("/api/loginstatus.php")
 
     .done(function(data){
-      if(data.status){
-        $(".SignOutMenu").show();
-        $(".SignInMenu").hide();
+                console.log("Anropar checked login");
+                console.log("status: " + data.status);
+                console.log("firstname: " + data.firstname);
+                console.log("lastname: " + data.lastname);
+                var spenat = true;
+      if(data.status){ // Galet data.status
+                console.log("Loggat in");
+        $(".signOutMenu").show();
+                console.log("Visar sign out");
+        $(".signInMenu").hide();
+                console.log("Göm sign in");
         $(".signedInAsWrapper").show();
-        var signedInAs = "Your signed in as " + data.firstname + " " + data.lastname ;
+        signedInAs = "Your signed in as " + data.firstname + " " + data.lastname ;
         $(".signedInAs").html(signedInAs);
       }
       else{
-        $(".SignInMenu").show();
-        $(".SignOutMenu").hide();
+        $(".signInMenu").show();
+        $(".signOutMenu").hide();
         $(".signedInAsWrapper").hide();
       }
     });
@@ -62,18 +70,27 @@ $(document).ready(function(){
           var password = $('.passwordSignIn').val();
 
         console.log( "\nEmail: " + email + "\nPassword: " + password);
-
         $.post( "api/checklogin.php?",
           {
             email: email,
             password: password} )
           .done(function(data){
-            console.log("Success" + data);
+            console.log("Success " + data);
             $("#signInWindow").modal('hide');
           })
           .fail(function(error){
             console.log("Failed login" + error);
           });
+    });
+
+    // Sign out
+    $("nav").on('click', '.signOutButton', function () {
+      //$("#signOutButton").click(function(){
+          alert("Klickat på sign out");
+      $.post("Logout.php?")
+      .done(function(){
+        alert("Du har blivit utloggad");
+      });
     });
 
     // Recover Password

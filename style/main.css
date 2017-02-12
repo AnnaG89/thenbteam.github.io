@@ -191,9 +191,9 @@ tbody{
   padding: 15px;
   text-align: right;
 }
-#SignInMenu{
-  display: block;
+.signInMenu{
+  display: none;
 }
-#SignOutMenu{
+.signOutMenu{
   display: none;
 }
