@@ -91,15 +91,17 @@ ul {
 .one:hover ~ hr {
   margin-left: 3%;
   opacity: 1;
+  width: 30%;
 }
 .two:hover ~ hr {
-  margin-left: 30%;
+  margin-left: 37%;
   opacity: 1;
-  width: 37%;
+  width: 30%;
 }
 .three:hover ~ hr {
-  margin-left: 76%;
+  margin-left: 71%;
   opacity: 1;
+  width: 26%;
 }
 hr {
   height: .25rem;

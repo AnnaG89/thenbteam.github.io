@@ -39,7 +39,7 @@ $(document).ready(function(){
         var city = $('.city').val();
         var website = $('.website').val();
 
-        alert("Clicked confirm registration \n" +
+        console.log("Clicked confirm registration \n" +
         "\nName: " + firstName + " " + lastName +
         "\nCompany: " + company +
         "\nEmail: " + email +
@@ -139,7 +139,7 @@ $(document).ready(function(){
       var img4 = '<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/jeremiah-wilson-4.jpg">';
       var img5 = '<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/jeremiah-wilson-5.jpg">';
 
-      alert("" +
+      console.log("" +
       photographerName + "\n" +
       photographerPicture + "\n" +
       photographerCompany + "\n" +
