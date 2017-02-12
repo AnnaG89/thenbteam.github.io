@@ -21,9 +21,13 @@ $(document).ready(function(){
         $(".signedInAs").html(signedInAs);
       }
       else{
+        console.log("Loggat ut");
         $(".signInMenu").show();
+        console.log("Visa sign in");
         $(".signOutMenu").hide();
+        console.log("Göm sign out");
         $(".signedInAsWrapper").hide();
+        console.log("Dölj inloggad");
       }
     });
 
