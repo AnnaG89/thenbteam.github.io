@@ -11,23 +11,16 @@ $(document).ready(function(){
                 console.log("firstname: " + data.firstname);
                 console.log("lastname: " + data.lastname);
       if(data.status){ // Galet data.status
-                console.log("Loggat in");
-        $(".signOutMenu").show();
-                console.log("Visar sign out");
         $(".signInMenu").hide();
-                console.log("Göm sign in");
+        $(".signOutMenu").show();
         $(".signedInAsWrapper").show();
         signedInAs = "Du är inloggad som " + data.firstname + " " + data.lastname ;
         $(".signedInAs").html(signedInAs);
       }
       else{
-        console.log("Loggat ut");
-        $(".signInMenu").show();
-        console.log("Visa sign in");
         $(".signOutMenu").hide();
-        console.log("Göm sign out");
-        $(".signedInAsWrapper").hide();
-        console.log("Dölj inloggad");
+        $(".signInMenu").show();
+        $(".signedInAsWrapper").hide();*/
       }
     });
 
@@ -114,13 +107,16 @@ $(document).ready(function(){
     searchResult();
 });
 
-// View profile
+/// View profile
 function showPhotographer(photographerId){
   console.log("Startat funktionen showPhotographer " + photographerId);
+
+
 
   $.post( "api/read2.php?",
     {id: photographerId} )
       .done(function(data){
+        //data = JSON.parse(data);
         alert("Success: " + data + "\n" +
               "Firstname: " + data.firstname + "\n" +
               "Lastname: " + data.lastname + "\n" +
