@@ -150,18 +150,9 @@ var photographerName = parsedData.info.firstname + " " + parsedData.info.lastnam
 var photographerPicture = "<img src='" + parsedData.info.profilepic +"'  alt='profilePicture' />";
 var photographerCompany = parsedData.info.company;
 var photographerCity = parsedData.info.city;
-var photographerWebsite = parsedData.info.website;
-var photographerContact = parsedData.info.email;
-var photographerFreeText = "<p>A lot of free text from this photagrapher. A lot of free text from this photagrapher." +
-                              "A lot of free text from this photagrapher. A lot of free text from this photagrapher." +
-                              "A lot of free text from this photagrapher. A lot of free text from this photagrapher." +
-                              "A lot of free text from this photagrapher. A lot of free text from this photagrapher." +
-                              "A lot of free text from this photagrapher. A lot of free text from this photagrapher." +
-                              "A lot of free text from this photagrapher. A lot of free text from this photagrapher." +
-                              "A lot of free text from this photagrapher. A lot of free text from this photagrapher." +
-                              "A lot of free text from this photagrapher. A lot of free text from this photagrapher." +
-                              "A lot of free text from this photagrapher. A lot of free text from this photagrapher." +
-                              "A lot of free text from this photagrapher. A lot of free text from this photagrapher.</p>";
+var photographerWebsite = "<a href='"+ parsedData.info.website + "'>Hemsida</a>";
+var photographerContact = "<a href='mailto:" + parsedData.info.email+ "?Subject=Newbie%20fotografer' target='_top'>Skicka mail</a";
+var photographerFreeText = parsedData.info.bio;
 
         var img1 = '<img src="'+ parsedData.info.pic1 +'">';
         var img2 = '<img src="'+ parsedData.info.pic2 +'">';
