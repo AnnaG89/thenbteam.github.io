@@ -113,7 +113,9 @@ hr {
   opacity: 0;
 }
 
-
+.photographerName{
+  padding-left: 20px;
+}
 .photographerPicture{
   margin-left: 20px;
   width: 100%;
