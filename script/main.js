@@ -1,15 +1,19 @@
+var userID = {id:"null"};
+
 $(document).ready(function(){
+
+
  var signedInAs;
 
-  // Login status
+ // Login status
   $.getJSON("/api/loginstatus.php")
 
     .done(function(data){
-                //alert("Page load data: " + data);
-                console.log("Anropar checked login");
-                console.log("status: " + data.status);
-                console.log("firstname: " + data.firstname);
-                console.log("lastname: " + data.lastname);
+        userID.id = data.id;
+        console.log("Anropar checked login");
+        console.log("status: " + data.status);
+        console.log("firstname: " + data.firstname);
+        console.log("lastname: " + data.lastname);
       if(data.status){ // Galet data.status
         $(".signInMenu").hide();
         $(".signOutMenu").show();
@@ -23,6 +27,9 @@ $(document).ready(function(){
         $(".signedInAsWrapper").hide();
       }
     });
+
+
+
 
   // Registration form
   $("#registerWindow").on('click', '#registerConfirmButton', function (e) {
@@ -57,6 +64,7 @@ $(document).ready(function(){
             fwebsite: website} )
           .done(function(data){
             console.log("Success" + data);
+            $("#registerWindow").modal('hide');
           })
           .fail(function(error){
             console.log("Failed register" + error);
@@ -66,6 +74,9 @@ $(document).ready(function(){
           alert("Lösenorden matchar inte varandra");
         }
     });
+
+
+
 
     // Sign In form
     $("#signInWindow").on('click', '#logInButton', function () {
@@ -87,11 +98,17 @@ $(document).ready(function(){
           });
     });
 
+
+
+
     // Sign out
     $("nav").on('click', '.signOutButton', function () {
           alert("Du har blivit utloggad");
       $.post("api/logout.php?")
     });
+
+
+
 
     // Recover Password (Funktionen är inte implementerad än)
     $("#recoverPasswordWindow").on('click', '#recoverPasswordButton', function (e) {
@@ -103,111 +120,154 @@ $(document).ready(function(){
     });
 
 
+
+
+    // Upload edits
+    $("#editUserWindow").on('click', '#updateUserButton', function () {
+      var firstName = $('.updateFirstName').val();
+      var lastName = $('.updateLastName').val();
+      var profilePicture = $(".updateProfilePicture").val();
+      var company = $('.updateCompany').val();
+      var email = $('.updateEmail').val();
+      var city = $('.updateCity').val();
+      var website = $('.updateWebsite').val();
+      var bio = $('.updateBio').val();
+      var pic1 = $(".updatePicture1").val();
+      var pic2 = $(".updatePicture2").val();
+      var pic3 = $(".updatePicture3").val();
+      var pic4 = $(".updatePicture4").val();
+      var pic5 = $(".updatePicture5").val();
+
+      $.post( "/api/edit.php?",
+        { ufirstname: firstName,
+          ulastname: lastName,
+          ucompany: company,
+          uemail: email,
+          ucity: city,
+          uwebsite: website,
+          uprofilepic: profilePicture,
+          upic1: pic1,
+          upic2: pic2,
+          upic3: pic3,
+          upic4: pic4,
+          upic5: pic5} )
+        .done(function(data){
+          //alert("Success" + data);
+          $("#editUserWindow").modal('hide');
+          location.reload();
+        })
+        .fail(function(error){
+          console.log("Failed update" + error);
+        });
+    });
+
+
+
+
+    // Delete User
+    $("#deleteWindow").on('click', '#deleteUserButton', function () {
+        alert("Din profil har blivit raderad");
+        $.post("api/delete_user.php?");
+        location.reload();
+    });
+
+
     // Search results
     searchResult();
 });
 
-/// View profile
+// View profile
 function showPhotographer(photographerId){
-  console.log("Startat funktionen showPhotographer " + photographerId);
-
-
 
   $.post( "api/read2.php?",
     {id: photographerId} )
       .done(function(data){
-        console.log(data);
-        //data = JSON.parse(data);
         var parsedData = JSON.parse(data);
-        console.log(parsedData);
-        //console.log(parsedData.data.firstname);
-        /*alert("Success: " + data + "\n" +
-              "Firstname: " + parsedData.info.firstname + "\n" +
-              "Lastname: " + parsedData.info.lastname + "\n" +
-              "Company: " + parsedData.info.company + "\n" +
-              "Email: " + parsedData.info.email + "\n" +
-              "Profile Pic: " + parsedData.info.profilepic + "\n" +
-              "Instagram: " + parsedData.info.insta + "\n" +
-              "Website: " + parsedData.info.website + "\n" +
-              "City: " + parsedData.info.city + "\n" +
-              "Bio: " + parsedData.info.bio + "\n" +
-              "Pic 1 : " + parsedData.info.pic1 + "\n" +
-              "Pic 2 : " + parsedData.info.pic2 + "\n" +
-              "Pic 3 : " + parsedData.info.pic3 + "\n" +
-              "Pic 4 : " + parsedData.info.pic4 + "\n" +
-              "Pic 5 : " + parsedData.info.pic5 + "\n");*/
 
+      // Starta modal här
+      $("#profileWindow").modal("show");
 
-      /*
-        `id`, `firstname`, `lastname`, `company`, `email`, `profilepic`, `insta`, `website`, `city`, `bio`, `pic1`, `pic2`, `pic3`, `pic4`, `pic5`
-      */
+      var photographerName = parsedData.info.firstname + " " + parsedData.info.lastname;
+      var photographerPicture = "<img src='" + parsedData.info.profilepic +"'  alt='profilePicture' />";
+      var photographerCompany = parsedData.info.company;
+      var photographerCity = parsedData.info.city;
+      var photographerWebsite = "<a href='"+ parsedData.info.website + "'>Hemsida</a>";
+      var photographerContact = "<a href='mailto:" + parsedData.info.email+ "?Subject=Newbie%20fotografer' target='_top'>Skicka mail</a";
+      var photographerFreeText = parsedData.info.bio;
 
+      var img1 = '<img src="'+ parsedData.info.pic1 +'">';
+      var img2 = '<img src="'+ parsedData.info.pic2 +'">';
+      var img3 = '<img src="'+ parsedData.info.pic3 +'">';
+      var img4 = '<img src="'+ parsedData.info.pic4 +'">';
+      var img5 = '<img src="'+ parsedData.info.pic5 +'">';
 
-  // Starta modal här
-  $("#profileWindow").modal("show");
+      $(".photographerName").html(photographerName);
+      $(".photographerPicture").html(photographerPicture);
+      $(".photographerCompany").html(photographerCompany);
+      $(".photographerCity").html(photographerCity);
+      $(".photographerWebsite").html(photographerWebsite);
+      $(".photographerContact").html(photographerContact);
+      $(".photographerFreeText").html(photographerFreeText);
+      $(".img1").html(img1);
+      $(".img2").html(img2);
+      $(".img3").html(img3);
+      $(".img4").html(img4);
+      $(".img5").html(img5);
+    });
+};
 
-var photographerName = parsedData.info.firstname + " " + parsedData.info.lastname;
-var photographerPicture = "<img src='" + parsedData.info.profilepic +"'  alt='profilePicture' />";
-var photographerCompany = parsedData.info.company;
-var photographerCity = parsedData.info.city;
-var photographerWebsite = "<a href='"+ parsedData.info.website + "'>Hemsida</a>";
-var photographerContact = "<a href='mailto:" + parsedData.info.email+ "?Subject=Newbie%20fotografer' target='_top'>Skicka mail</a";
-var photographerFreeText = parsedData.info.bio;
+// Edit profile
+function editUser(){
+  console.log("Startat funktionen editUser " + userID.id);
 
-        var img1 = '<img src="'+ parsedData.info.pic1 +'">';
-        var img2 = '<img src="'+ parsedData.info.pic2 +'">';
-        var img3 = '<img src="'+ parsedData.info.pic3 +'">';
-        var img4 = '<img src="'+ parsedData.info.pic4 +'">';
-        var img5 = '<img src="'+ parsedData.info.pic5 +'">';
+  $.post( "api/read2.php?",
+    {id: userID.id} )
+      .done(function(data){
+      var parsedData = JSON.parse(data);
+      var photographerFirstname = parsedData.info.firstname;
+      var photographerLastname = parsedData.info.lastname;
+      var photographerPicture = parsedData.info.profilepic;
+      var photographerCompany = parsedData.info.company;
+      var photographerCity = parsedData.info.city;
+      var photographerWebsite = parsedData.info.website;
+      var photographerContact = parsedData.info.email;
+      var photographerFreeText = parsedData.info.bio;
 
-        /*console.log("" +
-        photographerName + "\n" +
-        photographerPicture + "\n" +
-        photographerCompany + "\n" +
-        photographerCity + "\n" +
-        photographerWebsite + "\n" +
-        photographerContact + "\n\n" +
-        photographerFreeText + "\n\n" +
-        img1 + "\n" +
-        img2 + "\n" +
-        img3 + "\n" +
-        img4 + "\n" +
-        img5 + "\n");*/
+      var img1 = parsedData.info.pic1;
+      var img2 = parsedData.info.pic2;
+      var img3 = parsedData.info.pic3;
+      var img4 = parsedData.info.pic4;
+      var img5 = parsedData.info.pic5;
 
-
-        $(".photographerName").html(photographerName);
-        $(".photographerPicture").html(photographerPicture);
-        $(".photographerCompany").html(photographerCompany);
-        $(".photographerCity").html(photographerCity);
-        $(".photographerWebsite").html(photographerWebsite);
-        $(".photographerContact").html(photographerContact);
-        $(".photographerFreeText").html(photographerFreeText);
-        $(".img1").html(img1);
-        $(".img2").html(img2);
-        $(".img3").html(img3);
-        $(".img4").html(img4);
-        $(".img5").html(img5);
+      $(".updateFirstName").val(photographerFirstname);
+      $(".updateLastName").val(photographerLastname);
+      $(".updateProfilePicture").val(photographerPicture);
+      $(".updateCompany").val(photographerCompany);
+      $(".updateCity").val(photographerCity);
+      $(".updateWebsite").val(photographerWebsite);
+      $(".updateEmail").val(photographerContact);
+      $(".updateBio").val(photographerFreeText);
+      $(".updatePicture1").val(img1);
+      $(".updatePicture2").val(img2);
+      $(".updatePicture3").val(img3);
+      $(".updatePicture4").val(img4);
+      $(".updatePicture5").val(img5);
     });
 };
 
 
-
-// vid klick skicka get request
-var searchResult = function(){
-  $.getJSON("/api/read.php")
-  .done(function(data){
-    tableStart = "<table class='table table-hover table-condensed'>" ;
-    for(var i = 0; i < data.length; i++){
-
-      console.log("Hämtar info");
-        tableStart += "<tr id=" + data[i].id + ">" + //<a href="">
-            "<th><a href='#' onclick='showPhotographer("+ data[i].id +");'>" + data[i].firstname + " " + data[i].lastname + "</a></th>" +
-            "<td class='textAlignCenter'><a href='#' onclick='showPhotographer("+ data[i].id +");'>" + data[i].company + "</a></td>" +
-            "<td class='textAlignRight'><a href='#' onclick='showPhotographer("+ data[i].id +");'>" + data[i].city +"</a></td>" +
-          "</tr>"; //</a>
-        }
-  tableStart += "</table>";
-  console.log(tableStart);
-  $(".searchResults").html(tableStart);
-});
+  var searchResult = function(){
+    $.getJSON("/api/read.php")
+    .done(function(data){
+      tableStart = "<table class='table table-hover table-condensed'>" ;
+      for(var i = 0; i < data.length; i++){
+          tableStart += "<tr id=" + data[i].id + ">" +
+              "<th><a href='#' onclick='showPhotographer("+ data[i].id +");'>" + data[i].firstname + " " + data[i].lastname + "</a></th>" +
+              "<td class='textAlignCenter'><a href='#' onclick='showPhotographer("+ data[i].id +");'>" + data[i].company + "</a></td>" +
+              "<td class='textAlignRight'><a href='#' onclick='showPhotographer("+ data[i].id +");'>" + data[i].city +"</a></td>" +
+            "</tr>";
+          }
+    tableStart += "</table>";
+    $(".searchResults").html(tableStart);
+  });
 }

@@ -166,6 +166,124 @@
   </div>
 
 
+  <!-- Edit user -->
+  <div class="modal fade" id="editUserWindow">
+    <div class="modal-dialog">
+      <div class="modal-content">
+
+        <!-- Header -->
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h3 class="modal-title">Redigera användare</h3>
+        </div>
+
+        <!-- body (form) -->
+        <div class="modal-body">
+
+          <form role="form" class="editUserForm">
+            <div class="form-group">
+              <label for="updateFirstName">Förnamn</label>
+              <input type="text"  class="form-control updateFirstName" placeholder="Förnamn">
+            </div>
+
+            <div class="form-group">
+              <label for="updateLastName">Efternamn</label>
+              <input type="text" class="form-control updateLastName" placeholder="Efternamn">
+            </div>
+
+            <div class="form-group">
+              <label for="updateCompany">Företag</label>
+              <input type="text" class="form-control updateCompany" placeholder="Företag">
+            </div>
+
+            <div class="form-group">
+              <label for="updateEmail">Email</label>
+              <input type="email" class="form-control updateEmail" placeholder="Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$">
+            </div>
+
+            <div class="form-group">
+              <label for="updateCity">Stad</label>
+              <input type="text" class="form-control updateCity" placeholder="Stad">
+            </div>
+
+            <div class="form-group">
+              <label for="updateWebsite">Hemsida</label>
+              <input type="text" class="form-control updateWebsite" placeholder="Hemsida">
+            </div>
+
+            <div class="form-group">
+              <label for="updateBio">Biografi</label>
+              <input type="text" class="form-control updateBio" placeholder="Biografi">
+            </div>
+
+            <div class="form-group">
+              <label for="updateProfilePicture">Profilbild</label>
+              <input type="text" class="form-control updateProfilePicture" placeholder="Profilbild">
+            </div>
+
+            <div class="form-group">
+              <label for="updatePicture1">Bild 1</label>
+              <input type="text" class="form-control updatePicture1" placeholder="Bild 1">
+            </div>
+
+            <div class="form-group">
+              <label for="updatePicture2">Bild 2</label>
+              <input type="text" class="form-control updatePicture2" placeholder="Bild 2">
+            </div>
+
+            <div class="form-group">
+              <label for="updatePicture3">Bild 3</label>
+              <input type="text" class="form-control updatePicture3" placeholder="Bild 3">
+            </div>
+
+            <div class="form-group">
+              <label for="updatePicture4">Bild 4</label>
+              <input type="text" class="form-control updatePicture4" placeholder="Bild 4">
+            </div>
+
+            <div class="form-group">
+              <label for="updatePicture5">Bild 5</label>
+              <input type="text" class="form-control updatePicture5" placeholder="Bild 5">
+            </div>
+          </form>
+
+          </div>
+
+          <!-- button -->
+          <div class="modal-footer">
+            <button class="btn btn primary btn-block" data-toggle="modal" data-target="#deleteWindow">Radera användare</button>
+            <button class="btn btn primary btn-block" id="updateUserButton">Uppdatera användare</button>
+          </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Delete user -->
+  <div class="modal fade" id="deleteWindow">
+    <div class="modal-dialog">
+      <div class="modal-content">
+
+        <!-- Header -->
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h3 class="modal-title">Radera användaren</h3>
+        </div>
+
+        <!-- body (form) -->
+        <div class="modal-body">
+          <button class="btn btn primary btn-block" id="deleteUserButton">Ja</button>
+          <button class="btn btn primary btn-block" id="updateUserButton" data-dismiss="modal">Nej</button>
+
+          </div>
+
+          <!-- button -->
+          <div class="modal-footer">
+
+          </div>
+      </div>
+    </div>
+  </div>
+
 
 
 
@@ -204,8 +322,6 @@
         <div class="row">
           <div class="col-lg-12 col-md-12 col-sm-12">
             <div class="photographerFreeText">
-            <!--<h4>Free text</h4>
-              <p>A lot of free text from this photagrapher.</p>-->
             </div>
           </div>
         </div>
@@ -218,16 +334,10 @@
             <div class="img3" ></div>
             <div class="img4" ></div>
             <div class="img5" ></div>
-
-            <!-- <div class="img1" ><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/jeremiah-wilson-1.jpg" alt></div>
-            <div class="img2" ><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/jeremiah-wilson-2.jpg" alt></div>
-            <div class="img3" ><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/jeremiah-wilson-3.jpg" alt></div>
-            <div class="img4" ><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/jeremiah-wilson-4.jpg" alt></div>
-            <div class="img5" ><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/jeremiah-wilson-5.jpg" alt></div> -->
-
-            <!-- images placed inside block elements to deal with a Firefox rendering bug affecting  scaled flexbox images -->
           </div>
-        </div> <!-- Portfolio end -->
+        </div>
+
+
       </div>
 
 
@@ -242,7 +352,7 @@
 
 
   <!-- Below header-->
-  <div class="signedInAsWrapper"><a class="signedInAs" href="editUser.html"></a></div>
+  <div class="signedInAsWrapper"><a class="signedInAs" href="" onclick="editUser()" data-toggle="modal" data-target="#editUserWindow"></a></div>
 
 
   <!-- Main content -->

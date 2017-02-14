@@ -113,6 +113,12 @@ hr {
   opacity: 0;
 }
 
+.editUser{
+  margin-top: 50px;
+}
+
+
+/* Photographer */
 .photographerName{
   padding-left: 20px;
 }
@@ -137,6 +143,9 @@ hr {
   list-style-type: none;
   font-weight: bold;
   color: #777;
+}
+.photographerDetails li{
+  min-width: 250px;
 }
 .photographerFreeText{
   padding-top: 20px;
