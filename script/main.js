@@ -145,6 +145,7 @@ $(document).ready(function(){
           uemail: email,
           ucity: city,
           uwebsite: website,
+          ubio: bio,
           uprofilepic: profilePicture,
           upic1: pic1,
           upic2: pic2,
@@ -191,7 +192,7 @@ function showPhotographer(photographerId){
       var photographerPicture = "<img src='" + parsedData.info.profilepic +"'  alt='profilePicture' />";
       var photographerCompany = parsedData.info.company;
       var photographerCity = parsedData.info.city;
-      var photographerWebsite = "<a href='"+ parsedData.info.website + "'>Hemsida</a>";
+      var photographerWebsite = "<a href='http://"+ parsedData.info.website + "'>Hemsida</a>";
       var photographerContact = "<a href='mailto:" + parsedData.info.email+ "?Subject=Newbie%20fotografer' target='_top'>Skicka mail</a";
       var photographerFreeText = parsedData.info.bio;
 
