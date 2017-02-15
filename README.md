@@ -26,8 +26,10 @@ Technologies I used in the project:
   - Bootstrap
   - Ajax
   - JSON
-
-
+  
+ Progression
+I started out by learning Bootstrap. How to set up the menu and the grid. When I had that knowledge I began to plan the structure. I choosed simple responsive design using a lot of modals. The first real problem I had was to access the id´s within any bootstrap content. The solution was found on the lovely place called StackOverflow. While I was waiting for the back end to get there part ready I made a lot of tests for all my clicks to see that everything worked. The hardest part was to get a successfull connection to the API. Despite all the calls from the front end to the back end isn´t 100% correct it actually works. 
+What can be improved? First of all the seperation of the code. In the future I will make more JS files to seperate the content. It had also been nice to find a solution to put the modals in a separate or many separate files. And for last the annoying glitch when using the menu. 
 
 Anna Gustafsson
   - https://www.linkedin.com/in/anna-gustafsson-087567b3
