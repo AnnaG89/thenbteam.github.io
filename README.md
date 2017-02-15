@@ -2,14 +2,7 @@
 thenbteam.github.io
 
 --------
-Radera detta stycke när readme är klar
-ditt namn, kurs och utbildning
-länk till projektet live
-länk till din LinkedIn-profil
-kort beskrivning av produkten, dess syfte och funktionalitet
-punktlista med vilka teknologier du använt
-kortfattat din arbetsprocess (mobile first eller ngt annat) och som resonerar 
----------
+This website main purpose is to collect photographers where the theme is picture of new borns. The photographers can register and create there own profile where they can display a small portfolio. On the profile you will also find contact information and a link to there website if there is any.
 
 The Project
 -----------
