@@ -2,7 +2,14 @@
 thenbteam.github.io
 
 --------
-This website main purpose is to collect photographers where the theme is picture of new borns. The photographers can register and create their own profile where they can display a small portfolio. On the profile you will also find contact information and a link to there website if there is any.
+Radera detta stycke när readme är klar
+ditt namn, kurs och utbildning
+länk till projektet live
+länk till din LinkedIn-profil
+kort beskrivning av produkten, dess syfte och funktionalitet
+punktlista med vilka teknologier du använt
+kortfattat din arbetsprocess (mobile first eller ngt annat) och som resonerar 
+---------
 
 The Project
 -----------
@@ -26,12 +33,8 @@ Technologies I used in the project:
   - Bootstrap
   - Ajax
   - JSON
-  
-Progression:
 
-I started out by learning Bootstrap. How to set up the menu and the grid. When I had that knowledge I began to plan the structure. I choosed simple responsive design using a lot of modals. The first real problem I had was to access the id´s within any bootstrap content. The solution was found on the lovely place called StackOverflow. While I was waiting for the back end to get there part ready I made a lot of tests for all my clicks to see that everything worked. The hardest part was to get a successfull connection to the API. Despite all the calls from the front end to the back end isn´t 100% correct it actually works.
 
-What can be improved? First of all the seperation of the code. In the future I will make more JS files to seperate the content. It had also been nice to find a solution to put the modals in a separate or many separate files. Also the annoying glitch when using the menu had been nice to find a solution for. And for last, the ajax part of the code should be more correct.
 
 Anna Gustafsson
   - https://www.linkedin.com/in/anna-gustafsson-087567b3
