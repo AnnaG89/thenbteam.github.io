@@ -4,6 +4,10 @@ session_start();
 <?php
 require('newbieConfig.php');
 
+/*$passwd= $_POST['password'];
+$salt1 = "18gI%f5A";
+$salt2 = "@Y4p91bN";
+$salt_password = md5($salt1.$passwd.$salt2);*/
 // username and password sent from form
 $username=$_POST['email'];
 $password=$_POST['password'];
@@ -18,11 +22,15 @@ $STH = $pdo->prepare("SELECT * FROM `Fotografer` WHERE `email`='$username' AND `
         echo "Error: " . $e->getMessage();
     }
 if ($STH->rowCount() == 1){
-    $_SESSION['userid']= 'id';
-    $_SESSION['firstname']= 'firstname';
-    $_SESSION['lastname']= 'lastname';
+    $result = $STH->fetch(PDO::FETCH_ASSOC);
+    $_SESSION['userid']= $result['id'];
+    $_SESSION['firstname']= $result['firstname'];
+    $_SESSION['lastname']= $result['lastname'];
     $_SESSION['status']=true;
-
+echo json_encode(TRUE);
+}else{
+echo json_encode(FALSE);
+}
 
 /*    $res = [
     "userid" => $_SESSION['userid'],
@@ -37,8 +45,5 @@ if ($STH->rowCount() == 1){
         $_SESSION['lastname']={$row[`lastname`]};
         $_SESSION['status']= true;
     }*/
-echo json_encode(TRUE);
-}else{
-echo json_encode(FALSE);
-}
+
 ?>
