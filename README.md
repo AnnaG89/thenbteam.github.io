@@ -2,7 +2,7 @@
 thenbteam.github.io
 
 --------
-This website main purpose is to collect photographers where the theme is picture of new borns. The photographers can register and create there own profile where they can display a small portfolio. On the profile you will also find contact information and a link to there website if there is any.
+This website main purpose is to collect photographers where the theme is picture of new borns. The photographers can register and create their own profile where they can display a small portfolio. On the profile you will also find contact information and a link to there website if there is any.
 
 The Project
 -----------
