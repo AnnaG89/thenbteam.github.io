@@ -18,7 +18,7 @@ $(document).ready(function(){
         $(".signInMenu").hide();
         $(".signOutMenu").show();
         $(".signedInAsWrapper").show();
-        signedInAs = "Du är inloggad som " + data.firstname + " " + data.lastname ;
+        signedInAs = "<span class='glyphicon glyphicon-pencil' aria-hidden='true'></span>  Du är inloggad som " + data.firstname + " " + data.lastname;
         $(".signedInAs").html(signedInAs);
       }
       else{
@@ -42,15 +42,6 @@ $(document).ready(function(){
         var password2 = $('.password2').val();
         var city = $('.city').val();
         var website = $('.website').val();
-
-        console.log("Clicked confirm registration \n" +
-        "\nName: " + firstName + " " + lastName +
-        "\nCompany: " + company +
-        "\nEmail: " + email +
-        "\nPassword: " + password1 +
-        "\nPassword: " + password2 +
-        "\nCity: " + city +
-        "\nWebsite: " + website);
 
         if(password1 === password2){
 
@@ -83,7 +74,6 @@ $(document).ready(function(){
           var email = $('.emailSignIn').val();
           var password = $('.passwordSignIn').val();
 
-        console.log( "\nEmail: " + email + "\nPassword: " + password);
         $.post( "api/checklogin.php?",
           {
             email: email,
@@ -219,7 +209,6 @@ function showPhotographer(photographerId){
 
 // Edit profile
 function editUser(){
-  console.log("Startat funktionen editUser " + userID.id);
 
   $.post( "api/read2.php?",
     {id: userID.id} )
