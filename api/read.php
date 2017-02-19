@@ -8,7 +8,7 @@ require "newbieConfig.php";
 
 //Namn, företag, stad
 
-$sql= "SELECT `id`, `firstname`, `lastname`, `company`, `city` FROM `Fotografer`";
+$sql= "SELECT `id`, `firstname`, `lastname`, `company`, `city` FROM `Fotografer` ORDER BY `firstname` ASC";
 $count=$pdo->prepare($sql);
 $count->execute();
 $row = $count->fetchAll(PDO::FETCH_OBJ);
