@@ -6,13 +6,10 @@ require "newbieConfig.php";
 ?>
 <?php
 
-/*$passwd= $_POST['fpassword2'];
-$salt1 = "18gI%f5A";
-$salt2 = "@Y4p91bN";
-$salt_password = md5($salt1.$passwd.$salt2);
-*/
+//pick up the userid from session
 $userid= $_SESSION['userid'];
 
+//Select everything except password on the session-userid. Put it in an array and send with json. 
 $sql= "SELECT `id`, `firstname`, `lastname`, `company`, `email`, `profilepic`, `website`, `city`, `bio`, `pic1`, `pic2`, `pic3`, `pic4`, `pic5` FROM `Fotografer` WHERE `id`= :id";
 $count=$pdo->prepare($sql);
 $count->bindParam(":id",$userid,PDO::PARAM_INT,5);
@@ -21,6 +18,7 @@ $row = $count->fetch(PDO::FETCH_OBJ);
 $personal = array('info'=>$row);
 echo json_encode($personal);
 
+//Update all columns with new values
 if(isset($_SESSION['userid'])){
     $sql="UPDATE `Fotografer` SET `firstname`= :firstname,`lastname`= :lastname,`company`= :company, `email`= :email, `profilepic`=:profilepic, `website`= :website, `city`=:city, `bio`= :bio, `pic1`=:pic1, `pic2`=:pic2, `pic3`=:pic3, `pic4`=:pic4, `pic5`=:pic5 WHERE `id`= $userid";
     $stm_update = $pdo->prepare($sql);
@@ -33,14 +31,4 @@ if(isset($_SESSION['userid'])){
     }else{
        echo json_encode(2); 
 }
-
-/*
- if(isset($_POST['uemail']) ) {
-        $sql="SELECT COUNT(*) AS 'antal_rader' FROM `Fotografer` WHERE `email`= :email";
-        $stm_count = $pdo->prepare($sql);
-        $stm_count->execute(['email' => $_POST['uemail']]);
-        foreach($stm_count as $row){
-        $antal_rader = $row['antal_rader'];
-        }
-}*/
 ?>
